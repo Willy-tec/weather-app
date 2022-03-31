@@ -1,9 +1,7 @@
 import {useState, useEffect} from "react";
-//import logo from './logo.svg'
 import "./App.css";
-import Card from "./component/card";
 import useFindTown from "./script/useFindTown";
-import useFindWeather, {weatherResponse} from "./script/useFindWeather";
+import useFindWeather from "./script/useFindWeather";
 import useLocation from "./script/useLocation";
 
 function App() {
@@ -52,20 +50,6 @@ function App() {
         setLoad(true);
       });
   }, [town]);
-
-  // useEffect(() => {
-  //   useLocation()
-  //     .then((data) => {
-  //       setLat(data.lat);
-  //       setLon(data.lon);
-  //       setCanLocate(true);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //       setCanLocate(false);
-  //       setLoad(true);
-  //     });
-  // }, []);
 
   const handleClick = () => {
     useLocation()
